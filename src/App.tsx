@@ -4,7 +4,6 @@ import { PageContent } from "./components/page-content";
 import { useTasksContext } from "./contexts/tasks-context";
 
 export function App() {
-
   const { data } = useTasksContext();
   
   if (!data) {

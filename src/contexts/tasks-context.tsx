@@ -1,4 +1,6 @@
 import { ContextProps, ContextProviderProps } from "@/interface/interface";
+import { ErrorPage } from "@/pages/error-page";
+import { Loading } from "@/pages/loading";
 import { getAllTasks } from "@/routes/get-all-tasks";
 import { useQuery } from "@tanstack/react-query";
 import { createContext, useContext } from "react";
@@ -15,12 +17,12 @@ export const TasksDataContextProvider = ({
     });
 
     if (isLoading) {
-        return <div>carregando...</div>
+        return <Loading />;
     }
 
     if (isError) {
         console.error(error);
-        return <div>Deu erro...</div>
+        return <ErrorPage />;
     }
 
     if (!data) {
