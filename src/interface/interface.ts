@@ -34,3 +34,7 @@ export interface ContextProps {
 export interface ContextProviderProps {
     children: ReactNode;
 }
+
+export interface TaskCardProps {
+    task: Task;
+}
