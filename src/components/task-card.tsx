@@ -92,18 +92,18 @@ export function TaskCard({ task } : TaskCardProps) {
             <CarouselContent>
               {task.images.map(image => (
                <CarouselItem key={image}>
-                <div className="relative">
+                <div>
                   <img 
                     src={image} 
                    alt={`Imagem associada à tarefa: ${task.title}`}
                    className="w-full h-[150px]"
                   />
               </div>
-            <CarouselPrevious className="absolute left-4 top-1/2" />
-            <CarouselNext className="absolute right-0 top-1/2"/>
             </CarouselItem>
            ))}
             </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2" />
+            <CarouselNext className="absolute right-0 top-1/2"/>
           </Carousel>
         </CardContent>
         <CardFooter className="flex justify-center">

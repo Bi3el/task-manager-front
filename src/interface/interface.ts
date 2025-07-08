@@ -38,3 +38,13 @@ export interface ContextProviderProps {
 export interface TaskCardProps {
     task: Task;
 }
+
+export interface NewTask {
+    title: string;
+    description: string;
+    images: Array<string>;
+}
+
+export interface CreateNewTaskProps {
+    task: NewTask;
+}
