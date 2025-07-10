@@ -48,3 +48,27 @@ export interface NewTask {
 export interface CreateNewTaskProps {
     task: NewTask;
 }
+
+export interface UpdatedTask {
+    id: string;
+    title: string;
+    description: string;
+    images: Array<string>;
+}
+
+export interface UpdateTaskFormProps {
+    task: UpdatedTask;
+    onClose: () => void;
+}
+
+export interface UpdateTaskProps {
+    updatedTask: UpdatedTask;
+}
+
+export interface DeleteTaskProps {
+    taskId: string;
+}
+
+export interface ChangeTaskCompletionProps {
+    taskId: string;
+}
